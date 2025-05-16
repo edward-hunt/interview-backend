@@ -4,11 +4,9 @@ const Task = require('../models/Task');
 // INTERVIEW TASK 1: This endpoint currently throws a 500 error
 const getAllTasks = async (req, res) => {
   try {
-    // HINT: Use the Task model to find all tasks
     // BONUS: Add pagination support using req.query.page and req.query.limit
-    
-    // This is intentionally broken - candidate should fix it
-    const tasks = await Task.findAll(); // Wrong method - should be find()
+
+    const tasks = await Task.findAll(); 
     res.json(tasks);
   } catch (error) {
     console.error('Error fetching tasks:', error);
